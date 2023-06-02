@@ -11,7 +11,7 @@ tags:
 
 Hello everyone, and welcolme to my website !
 
-Gamardjoba Lisandro "Edode" Chelidze, a French/Corse/Georgian student in CyberSecurity, and the beast on the left is Couic-Couic (read as Quick-Quick).
+Gamardjoba, I am Lisandro "Edode" Chelidze, a French/Corse/Georgian student in CyberSecurity, and the beast on the left is Couic-Couic (read as Quick-Quick).
 Couic-Couic is either a Seagull, a Duck or a Goose (I don't know, I'm not a bird expert), and he is my acolyte, helping me in my day-to-day work.
 
 The goal of this website is to share my knowledge and my research, and to help people who are interested in CyberSecurity, or in any other topic I will talk about.
