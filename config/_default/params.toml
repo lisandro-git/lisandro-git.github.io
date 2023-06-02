@@ -4,8 +4,8 @@ mainSections = ["post"]
 rssFullContent = true
 
 [footer]
-since = 2020
-customText = ""
+since = 2023
+customText = "Couic-Couic is going to be a trademark of himself. All rights reserved."
 
 [dateFormat]
 published = "Jan 02, 2006"
@@ -26,7 +26,7 @@ readingTime = true
 
 [article.license]
 enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+default = "Licensed under Couic-Couic"
 
 ## Widgets
 [[widgets.homepage]]
@@ -73,16 +73,16 @@ enabled = true
 enabled = true
 
 ## Comments
-[comments]
-enabled = true
-provider = "disqus"
-
-[comments.disqusjs]
-shortname = ""
-apiUrl = ""
-apiKey = ""
-admin = ""
-adminLabel = ""
+#[comments]
+#enabled = true
+#provider = "disqus"
+#
+#[comments.disqusjs]
+#shortname = ""
+#apiUrl = ""
+#apiKey = ""
+#admin = ""
+#adminLabel = ""
 
 [comments.utterances]
 repo = ""
