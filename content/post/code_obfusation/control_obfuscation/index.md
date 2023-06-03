@@ -27,9 +27,9 @@ This "else" block will therefore act as **Dead Code**, which is another obfuscat
 
 ![true_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/true-predicate.png) (Figure 1)
 
-[![false_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/false-predicate.png) (Figure 2)
+![false_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/false-predicate.png) (Figure 2)
 
-[![random_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/random-predicate.png) (Figure 3)
+![random_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/random-predicate.png) (Figure 3)
 
 It is very important to ensure that the **Opaque Predicates** chosen is as stealthy as possible, that is to say that this technique must not stand out from the rest of the code, and that this does not need to show an attacker that there is anything of value there.
 On the other hand, it is possible to make predicates on purpose which will be no, them, non-furtive, for example in the case of **Junk Code** or **Garbage Code**, to be able to deceive this person by making him believe something important in that place of the code.
@@ -50,13 +50,13 @@ As explained by ***Tímea Lázló et al***[1], the purpose of this technique is 
 
 A basic method for this technique is to: first explode the different parts of a fonction, and regroup them. Now that each of the blocks is encapsulated, it is possible to put them in a selective structure, such as a switch (in C++ for example), and each part of this switch contains one of the previously created blocks. Finally, the control flow is ensured thanks to a control variable, which will make it possible to direct the behavior of the program. This control variable is declared and changed at the end of each block of this same switch.
 
-[![a.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/a.png) (Figure 4)
+![a.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/a.png) (Figure 4)
 
-[![b.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/b.png) (Figure 5)
+![b.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/b.png) (Figure 5)
 
-[![gauche_control_flow_flatenning.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/gauche-control-flow-flatenning.png) (Figure 6)
+![gauche_control_flow_flatenning.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/gauche-control-flow-flatenning.png) (Figure 6)
 
-[![droite_control_flow_flatenning.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/droite-control-flow-flatenning.png) (Figure 7)
+![droite_control_flow_flatenning.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/droite-control-flow-flatenning.png) (Figure 7)
 
 We can assume that the **Control Flow Flatenning** is also a kind of Opaque Predicate, because no one can tell how the code will behave during the processing of these block.
 
@@ -73,7 +73,7 @@ The developers of the REvil (a.k.a Sodinokibi) ransomware use the latter techniq
 
 Indeed, REvil was programmed to communicate with a C2 server, in order to send the files before they were encrypted. Operators needed to use internal Windows libraries (in this case, WINHTTP.dll) to ensure communication. As a result, they to created their own hashing system (Figure 17), which allowed them to obfuscate the API calls they made.
 
-[![api_hash_python_code_2.png](img_control_obfuscation/api-hash-python-code-2.png)(Figure 17)
+![api_hash_python_code_2.png](img_control_obfuscation/api-hash-python-code-2.png)(Figure 17)
 
 There are several functions in the WINHTTP.dll library, we have listed the list and their hash below:
 
@@ -160,11 +160,11 @@ Where **Binary Stripping** involves stripping all data that is not needed by the
 
 Figure 10 will show a simple Golang-coded program that prints "Hello, World!", which will be compiled for a Linux system, using the following command: ***GOOS=linux GOARCH=amd64 go build main.go** *
 
-[![Basic_go_hello_world.png](img_control_obfuscation/basic-go-hello-world.png) (Figure 10)
+![Basic_go_hello_world.png](img_control_obfuscation/basic-go-hello-world.png) (Figure 10)
 
 Compiled, this code, which has not been stripped, weighs 1.8M and contains no less than 38334 words (Figure 11).
 
-[![wc_go_hellow_world.png](img_control_obfuscation/wc-go-hellow-world.png) (Figure 11)
+![wc_go_hellow_world.png](img_control_obfuscation/wc-go-hellow-world.png) (Figure 11)
 
 We want to make the executable as light as possible, because the less information there is in this program, the more complicated it will be to analyze it. First, it is possible to pass arguments to the compiler, which will reduce its size.
 
@@ -174,18 +174,18 @@ Hopefully, Golang allows you to remove certain information when compiling the pr
 The -w parameter allows you to remove the "DWARF" *([5] Unix International)*, which corresponds to all the debug data that is included in the binary file.
 With the executable obtained via the previous command, Figure 12 shows us the ELF (Executable and Linkable Format) information of this program.
 
-[![readelf-S_main_binary_stripping.png](img_control_obfuscation/readelf-s-main-binary-stripping.png)(Figure 12)
+![readelf-S_main_binary_stripping.png](img_control_obfuscation/readelf-s-main-binary-stripping.png)(Figure 12)
 
 We can see that there is debug information contained in the terminal output (red inset). This information greatly simplifies the work of an attacker. Several pieces of information remain unencrypted when decompiling the program, such as the names of functions/variables/classes; and other information such as a map that lists which variable has which memory address, etc. This is why it is necessary to remove this information when creating a program or a malware.
 
 To remove them, simply do the following command: ***GOOS=linux GOARCH=amd64 go build -ldflags="-w" main.go***
 As shown in Figure 13, by doing this command, we end up with a lighter executable (1.3M), as well as 27594 words.
 
-[![ldflags-w_main.go.png](img_control_obfuscation/ldflags-w-main-go.png) (Figure 13)
+![ldflags-w_main.go.png](img_control_obfuscation/ldflags-w-main-go.png) (Figure 13)
 
 Moreover, figure 14 shows us that there is no longer any debug information in the program.
 
-[![readelf-S_main_binary_stripping_No_Debug.png](img_control_obfuscation/readelf-s-main-binary-stripping-no-debug.png) (Figure 14)
+![readelf-S_main_binary_stripping_No_Debug.png](img_control_obfuscation/readelf-s-main-binary-stripping-no-debug.png) (Figure 14)
 
 There is a second parameter which can be added to reduce the size of a Go executable. The "-s" attribute of the "-ldflags" argument makes it possible not to generate a symbol table. A symbol table (or symtab) is used to centralize information such as the relocation table which contains a list of pointers which is stored in the executable.
 
@@ -193,18 +193,18 @@ If we base ourselves on Figure 14 (green inset), we can see that there are 2 tab
 
 Figure 15 shows us the result of using these 2 parameters when recompiling  a program with the "-s" and "-w" arguments.
 
-[![readelf-S-w_main_binary_stripping_No_Debug_No_symtab.png](img_control_obfuscation/readelf-s-w-main-binary-stripping-no-debug-no-symtab.png) (Figure 15)
+![readelf-S-w_main_binary_stripping_No_Debug_No_symtab.png](img_control_obfuscation/readelf-s-w-main-binary-stripping-no-debug-no-symtab.png) (Figure 15)
 
 We also notice that the size of the executable has decreased again, this time we went from initially 1.8M, to 1.2M, with a total of more than 26550 words, as shown in Figure 16.
 
-[![wc_go_stripped_ldflags_-s-w.png](img_control_obfuscation/wc-go-stripped-ldflags-s-w.png) (Figure 16)
+![wc_go_stripped_ldflags_-s-w.png](img_control_obfuscation/wc-go-stripped-ldflags-s-w.png) (Figure 16)
 
 In the context of other programming languages, it is also possible to add parameters to them in order to considerably reduce the size of an executable. Nevertheless, we are going to see a technique that is common to everything.
 Indeed, it is possible to "strip" an executable thanks to the **strip** command under a Linux based system.
 
 Still with the command output present in Figure 12, it is also possible to remove a lot of information. It is possible to strip all symbols from an executable using the following command: ***strip --strip-all executable_file***. By running this command, Figure 17 shows us that we find the same result as in Figure 15.
 
-[![strip_--strip-all_main.png](img_control_obfuscation/strip-strip-all-main.png)(Figure 17)
+![strip_--strip-all_main.png](img_control_obfuscation/strip-strip-all-main.png)(Figure 17)
 
 It is possible to remove only some information from an executable, as explained thanks to this manual [6], because removing headers which are necessary for the program will not make it run.
 
@@ -233,7 +233,7 @@ This technique consists of using blocks like try/catch/finally, in order to be a
 ![Exception_try_catch_x.png](img_control_obfuscation/exception-try-catch-x.png) (Figure 8)
 
 In addition, it is possible to add *Opaque Predicates*, which makes this technique more complex.
-[![Exception_try_catch_opaque_predicates.png](img_control_obfuscation/exception-try-catch-opaque-predicates.png) (Figure 9)
+![Exception_try_catch_opaque_predicates.png](img_control_obfuscation/exception-try-catch-opaque-predicates.png) (Figure 9)
 
 ### Register reassignment
 Registry reassignment (or renaming) is a deception technique as well as an anti-disassembly technique that makes the analyst's task more complicated. As explained by ***K. Brezinski et al*** [10] this consists of exchanging the value of registers from one generation to another without the behavior of the program changing.
