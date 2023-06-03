@@ -9,14 +9,14 @@ tags:
   - General
 ---
 
-Hello everyone, and welcolme to my website !
+Hello everyone, and welcome to my website !
 
 Gamardjoba, I am Lisandro "Edode" Chelidze, a French/Corse/Georgian student in CyberSecurity, and the beast on the left is Couic-Couic (read as Quick-Quick).
 Couic-Couic is either a Seagull, a Duck or a Goose (I don't know, I'm not a bird expert), and he is my acolyte, helping me in my day-to-day work.
 
 The goal of this website is to share my knowledge and my research, and to help people who are interested in CyberSecurity, or in any other topic I will talk about.
 
-To present myself a little bit, I am completely self-taught, and I am specializing myself in Cyber Threat Intelligence.
+To present myself a little, I am completely self-taught, and I am specializing myself in Cyber Threat Intelligence.
 I read a lot of articles, books, and I watch a lot of videos about everything that is related to CyberSecurity, and I try to stay up-to-date with the latest news.
 
 I worked in apprenticeship as an Cybersecurity Innovation Engineer in Orange Cyberdefense (OCD), and as a R&D Security Engineer at Stormshield (Airbus Defense and Space).
