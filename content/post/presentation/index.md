@@ -19,7 +19,7 @@ The goal of this website is to share my knowledge and my research, and to help p
 To present myself a little, I am completely self-taught, and I am specializing myself in Cyber Threat Intelligence.
 I read a lot of articles, books, and I watch a lot of videos about everything that is related to CyberSecurity, and I try to stay up-to-date with the latest news.
 
-I worked in apprenticeship as an Cybersecurity Innovation Engineer in Orange Cyberdefense (OCD), and as a R&D Security Engineer at Stormshield (Airbus Defense and Space).
+I worked in apprenticeship as a Cybersecurity Innovation Engineer in Orange Cyberdefense (OCD), and as a R&D Security Engineer at Stormshield (Airbus Defense and Space).
 When I am not at work, I am usually working on my own projects, or I am doing some CTFs. All my projects are publicly available on my GitHub,
 and I hope that you'll find them interesting.
 

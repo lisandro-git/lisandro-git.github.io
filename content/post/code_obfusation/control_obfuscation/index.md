@@ -25,11 +25,11 @@ The Figure 1 shows an example of a True Predicate. We know that the result of th
 All of this can be simplified. To obfuscate a program using these techniques, you must always put an "else" in a block, even if there is no need for it, which allows you to have the behavior of the True and False predicate.
 This "else" block will therefore act as **Dead Code**, which is another obfuscation technique.
 
-![true_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/true-predicate.png) (Figure 1)
+![true_predicate.png](img_control_obfuscation/true-predicate.png) (Figure 1)
 
-![false_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/false-predicate.png) (Figure 2)
+![false_predicate.png](img_control_obfuscation/false-predicate.png) (Figure 2)
 
-![random_predicate.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/random-predicate.png) (Figure 3)
+![random_predicate.png](img_control_obfuscation/random-predicate.png) (Figure 3)
 
 It is very important to ensure that the **Opaque Predicates** chosen is as stealthy as possible, that is to say that this technique must not stand out from the rest of the code, and that this does not need to show an attacker that there is anything of value there.
 On the other hand, it is possible to make predicates on purpose which will be no, them, non-furtive, for example in the case of **Junk Code** or **Garbage Code**, to be able to deceive this person by making him believe something important in that place of the code.
@@ -50,13 +50,13 @@ As explained by ***Tímea Lázló et al***[1], the purpose of this technique is 
 
 A basic method for this technique is to: first explode the different parts of a fonction, and regroup them. Now that each of the blocks is encapsulated, it is possible to put them in a selective structure, such as a switch (in C++ for example), and each part of this switch contains one of the previously created blocks. Finally, the control flow is ensured thanks to a control variable, which will make it possible to direct the behavior of the program. This control variable is declared and changed at the end of each block of this same switch.
 
-![a.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/a.png) (Figure 4)
+![a.png](img_control_obfuscation/a.png) (Figure 4)
 
-![b.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/b.png) (Figure 5)
+![b.png](img_control_obfuscation/b.png) (Figure 5)
 
-![gauche_control_flow_flatenning.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/gauche-control-flow-flatenning.png) (Figure 6)
+![gauche_control_flow_flatenning.png](img_control_obfuscation/gauche-control-flow-flatenning.png) (Figure 6)
 
-![droite_control_flow_flatenning.png](https://bookstack.x394.org/uploads/images/gallery/2022-11/droite-control-flow-flatenning.png) (Figure 7)
+![droite_control_flow_flatenning.png](img_control_obfuscation/droite-control-flow-flatenning.png) (Figure 7)
 
 We can assume that the **Control Flow Flatenning** is also a kind of Opaque Predicate, because no one can tell how the code will behave during the processing of these block.
 
