@@ -27,7 +27,7 @@ For my end of school thesis, I wrote a paper the use of Code Obfuscation in Malw
 I will soon post it on this website, so stay tuned !
 
 As for the beast, Couic-Couic is a very special bird. He is very curious, and he likes to learn new things. He is also very smart, and he is a very good friend.
-My girlfriend bought it for me when we went to the "Cité de la Voile Éric Tabarly" in Lorient (Brittany, France). I decided to make him my mascot, and he is a very good help !
+I decided to make him my mascot, and he is a very good help !
 
 Anyway, I hope you'll enjoy your stay on my website, learn new things, and have fun !
 
