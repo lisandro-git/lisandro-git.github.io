@@ -1,6 +1,6 @@
 ---
 title: Control Obfuscation
-description: End of school thesis about Code Obfuscation in Malware
+description: End of school thesis about Code Obfuscation used in Malware
 slug: Control Obfuscation
 date: 2023-02-13 00:00:00+0000
 categories:
@@ -77,8 +77,6 @@ Indeed, REvil was programmed to communicate with a C2 server, in order to send t
 
 There are several functions in the WINHTTP.dll library, we have listed the list and their hash below:
 
-
-Il existe plusieurs fonctions dans la librairie WINHTTP.dll, nous vous avons mis la liste ainsi que leur hash ci-dessous :
 | Function name                            | Hash     |
 |------------------------------------------|----------|
 | WinHttpAddRequestHeaders                 | 0x30c46  |

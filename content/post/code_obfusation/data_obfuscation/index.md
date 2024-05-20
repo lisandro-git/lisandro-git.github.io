@@ -1,6 +1,6 @@
 ---
 title: Data Obfuscation
-description: End of school thesis about Code Obfuscation in Malware
+description: End of school thesis about Code Obfuscation used in Malware
 slug: Data Obfuscation
 date: 2023-02-13 00:00:00+0000
 categories:

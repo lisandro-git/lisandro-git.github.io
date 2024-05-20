@@ -1,6 +1,6 @@
 ---
 title: Layout Obfuscation
-description: End of school thesis about Code Obfuscation in Malware
+description: End of school thesis about Code Obfuscation used in Malware
 slug: Layout Obfuscation
 date: 2023-02-13 00:00:00+0000
 categories:
@@ -81,7 +81,7 @@ Code transposition (or instruction swapping) is the act of using conditional or 
 
 Function reordering is very similar to code transposition, except that it involves reordering entire functions, as opposed to reordering chunks of code. ***I. You et al*** [2] specifies that this technique is better if it is done randomly, since we can generate n! (factorial of n) different variant of code, where the value "n" is the number of routines that a code can have and therefore n possible signature. For example, if there are 7 functions for a program, it is possible to create 5040 programs with a different signature.
 
-La Figure 7 représente une transposition d'un code basique, et la Figure 8 fais une représentation assembleur de ce même code.
+Figure 7 represents a transposition of a basic code, and Figure 8 shows an assembler representation of this same code.
 
 ![code_transpo_goland.png](img_layout_obfuscation/code-transpo-goland.png)(Figure 7)
 
