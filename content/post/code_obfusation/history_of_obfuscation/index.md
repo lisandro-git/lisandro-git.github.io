@@ -32,7 +32,7 @@ There are hundreds of other programs like these, and they are all available on t
 The creators of the IOCCC (Landon Curt Noll and Larry Bassel) came to this idea when they had to correct very poorly written codes, such as the famous "Bourne Shell" (sh) code[3].
 It is noted that the IOCCC is to this day the oldest internet competition still in existence[4].
 
-[![ioccc-flight-simulator.png](img_data_obfuscation%2Fioccc-flight-simulator.png)](https://bookstack.x394.org/uploads/images/gallery/2022-11/ioccc-flight-simulator.jpg) **Flying simulator program**
+[![ioccc-flight-simulator.png](img_data_obfuscation/ioccc-flight-simulator.png)](img_data_obfuscation/ioccc-flight-simulator.png) **Flying simulator program**
 
 ### Why do we need code obfuscation?
 It’s true that obfuscation is something we don’t hear much about. Even the developers themselves don't necessarily know what it is, or what it is for. However, it is a technique widely used by malware developers as well as video game studios.
